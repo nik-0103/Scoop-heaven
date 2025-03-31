@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Web Design Mastery | IceWorld</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#" class="logo">🍦Scoop <span>Heaven</span></a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-3-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      <div class="nav__btns">
+        <button onclick="toggleCart()" class="btn"><i class="ri-shopping-cart-2-fill"></i></button>
+        <button onclick="toggleAuthPopup()" class="btn"><i class="ri-account-box-line"></i></button>
+        <button id="dark-mode-toggle" class="btn"><i class="ri-contrast-2-line"></i></button>
+      </div>
+    </nav>
+
+    <header id="home">
+      <div class="header__image">
+        <img src="assets/header.png" alt="header" />
+      </div>
+      <div class="header__content">
+        <h3>The best ice cream brands</h3>
+        <h1 class="animated-heading">All your faves, <span>all in one place.</span></h1>
+        <p class="section__description">
+          Indulge in a delightful journey of flavors! Discover creamy, delicious
+          ice creams crafted to bring joy to every scoop. Welcome to your sweet
+          escape!
+        </p>
+        <div class="header__btn">
+          <button class="btn">Get the scoop</button>
+        </div>
+        <ul class="socials">
+          <li>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-pinterest-line"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-phone-fill"></i></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="section__container popular__container" id="menu">
+      <h2 class="section__header">Popular Ice-Cream</h2>
+      <div class="popular__grid">
+        <div class="popular__card">
+          <img src="assets/popular-1.png" alt="popular" />
+          <div class="popular__card__content">
+            <h4>Mango Tango Sorbet</h4>
+            <h3>$5.49</h3>
+            <button class="btn" onclick="addToCart('Mango Tango Sorbet', 5.49)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="popular__card">
+          <img src="assets/popular-2.png" alt="popular" />
+          <div class="popular__card__content">
+            <h4>Chocolate Fudge Delight</h4>
+            <h3>$5.99</h3>
+            <button class="btn" onclick="addToCart('Chocolate Fudge Delight', 5.99)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="popular__card">
+          <img src="assets/popular-3.png" alt="popular" />
+          <div class="popular__card__content">
+            <h4>Strawberry Swirl Bliss</h4>
+            <h3>$4.99</h3>
+            <button class="btn" onclick="addToCart('Strawberry Swirl Bliss', 5.99)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container discover__container" id="categories">
+      <h2 class="section__header">Most Selling Ice-Cream</h2>
+      <p class="section__description">
+        Discover our crowd favorites! These ice creams are loved by everyone and
+        have become the top picks for their irresistible flavors and creamy
+        textures.
+      </p>
+      <div class="discover__grid">
+        <div class="discover__card">
+          <img src="assets/discover-1.jpg" alt="discover" />
+          <div class="discover__card__content">
+            <h4>Double Chocolate Crunch</h4>
+            <p class="section__description">
+              Dive into a chocolate lover's paradise with our Double Chocolate
+              Crunch. This rich and creamy ice cream is made with premium cocoa
+              and blended with crunchy chocolate chunks to deliver a perfect
+              balance of smoothness and texture.
+            </p>
+            <h3>
+              $6.99 <span><s>$9.99</s></span>
+            </h3>
+            <div class="discover__card__btn">
+              <button class="btn" onclick="addToCart('Double Chocolate Crunch', 6.99)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="discover__card">
+          <img src="assets/discover-2.jpg" alt="discover" />
+          <div class="discover__card__content">
+            <h4>Strawberry Cheesecake Bliss</h4>
+            <p class="section__description">
+              Experience the perfect harmony of fruity and creamy with our
+              Strawberry Cheesecake Bliss. Every spoonful feels like enjoying a
+              slice of fresh strawberry cheesecake, making it an irresistible
+              dessert.
+            </p>
+            <h3>
+              $5.99 <span><s> $8.99</s></span>
+            </h3>
+            <div class="discover__card__btn">
+              <button class="btn" onclick="addToCart('Strawberry Cheesecake Bliss', 5.99)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="discover__card">
+          <img src="assets/discover-3.jpg" alt="discover" />
+          <div class="discover__card__content">
+            <h4>Classic Cookies and Cream</h4>
+            <p class="section__description">
+              Savor the timeless charm of our Classic Cookies and Cream ice
+              cream. Made with velvety smooth vanilla ice cream, it is
+              generously packed with chunks of chocolate cookies to create a
+              delightful crunch in every bite.
+            </p>
+            <h3>
+              $5.49 <span><s> $10.49</s></span>
+            </h3>
+            <div class="discover__card__btn">
+              <button class="btn" onclick="addToCart('Classic Cookies and Cream', 5.49)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner">
+      <div class="banner__image"></div>
+      <div class="banner__content">
+        <h2 class="section__header">
+          Get Yummy Ice-Cream at a Reasonable Price
+        </h2>
+        <p class="section__description">
+          Treat yourself to delightful ice creams without breaking the bank!
+          Enjoy premium quality and mouthwatering flavors at prices that make
+          every scoop worth it.
+        </p>
+        <div class="banner__flex">
+          <div class="banner__card">
+            <img src="assets/banner-1.png" alt="banner" />
+            <h4>Fresh & Natural</h4>
+          </div>
+          <div class="banner__card">
+            <img src="assets/banner-2.png" alt="banner" />
+            <h4>Quick Packaging</h4>
+          </div>
+          <div class="banner__card">
+            <img src="assets/banner-3.png" alt="banner" />
+            <h4>Fast Delivery</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container subscribe__container" id="contact">
+      <div class="subscribe__content">
+        <h2 class="section__header">Subscribe For Discounts</h2>
+        <p class="section__description">
+          Don't miss out on sweet deals! Subscribe now to receive exclusive
+          discounts and updates on our latest ice cream flavors and special
+          offers.
+        </p>
+        <form action="/">
+          <input type="text" placeholder="Type Your Email" />
+          <button class="btn">Subscribe</button>
+        </form>
+      </div>
+    </section>
+    
+    <section>
+      <div id="cart-overlay" class="cart-overlay" onclick="toggleCart()"></div>
+        <div id="cart-popup" class="cart-popup">
+          <div class="cart-content">
+              <span class="close" onclick="toggleCart()">&times;</span>
+              <h2>Shopping Cart</h2>
+              <ul id="cart-items"></ul>
+              <p>Total: $<span id="total-price">0</span></p>
+              <button onclick="checkout()" class="btn">Checkout</button>
+          </div>
+      </div>
+    </section>
+    <section>
+      <div id="auth-overlay" class="auth-overlay" onclick="toggleAuthPopup()"></div>
+      <div id="auth-popup" class="auth-popup">
+        <div class="auth-content">
+            <span class="close" onclick="toggleAuthPopup()">&times;</span>
+            <h2 id="auth-title">Login</h2>
+            
+            <input type="text" id="username" placeholder="Enter Username" required>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            
+            <button id="auth-button" onclick="authenticate()">Login</button>
+            <p id="auth-switch">Don't have an account? <a href="#" onclick="toggleAuthMode()">Sign Up</a></p>
+            <button id="logout-btn" onclick="logout()" style="display: none;">Logout</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <a href="#" class="logo">Ice<span>World</span></a>
+        </div>
+        <div class="footer__col">
+          <ul class="footer__links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <ul class="socials">
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-pinterest-line"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-phone-fill"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">
+        <h1>Thanks for visiting us</h1>
+      </div>
+    </footer>
+    <button id="back-to-top">⬆</button>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
